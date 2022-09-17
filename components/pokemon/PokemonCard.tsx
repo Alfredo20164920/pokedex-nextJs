@@ -21,7 +21,7 @@ export const PokemonCard: FC<PokemonCardProps> = ({pokemon: {id, name, url, img}
 	return (
         <>
             <Grid xs={ 6 } md={4} xl={2} key={id} >
-				<Card isHoverable isPressable onClick={onPokemonClick}>
+				<Card isHoverable isPressable onPress={onPokemonClick}>
 					<Card.Body >
 						<Card.Image src={img} width='100%' height={140} />
                     </Card.Body>
