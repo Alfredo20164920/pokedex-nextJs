@@ -25,7 +25,6 @@ const Favoritos = () => {
                 : <FavoritesPokemonsList pokemons={favoritePokemons} />
             }
 
-            <NoFavorites />
         </MainLayout>
     )
 }
