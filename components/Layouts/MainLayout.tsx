@@ -1,7 +1,6 @@
 import { FC } from "react"
 import Head from "next/head"
 import { Navbar } from "../ui";
-import { useRouter } from 'next/router';
 
 interface MainLayoutProps {
     children?: React.ReactNode

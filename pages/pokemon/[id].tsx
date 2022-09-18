@@ -5,7 +5,6 @@ import { Button, Card, Container, Grid, Text, Image } from '@nextui-org/react';
 
 import confetti from 'canvas-confetti';
 
-import { pokeApi } from '../../api';
 import { MainLayout } from '../../components/Layouts';
 import { Pokemon } from '../../interfaces';
 import { getPokemoninfo, localFavorites } from '../../utils';
@@ -77,8 +76,6 @@ const PokemonPage: NextPage<PokemonPageProps> = ({pokemon}) => {
         </MainLayout>
     )
 }
-
-// You should use getStaticPaths if you’re statically pre-rendering pages that use dynamic routes
 
 export const getStaticPaths: GetStaticPaths = async (ctx) => {
 

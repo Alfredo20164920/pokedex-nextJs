@@ -1,6 +1,6 @@
 import { FC, useState } from 'react'
 
-import { GetStaticProps, NextPage, GetStaticPaths } from 'next';
+import { GetStaticProps, GetStaticPaths } from 'next';
 import { Button, Card, Container, Grid, Text, Image } from '@nextui-org/react';
 
 import confetti from 'canvas-confetti';
@@ -78,14 +78,10 @@ const PokemonByNamePage: FC<NamePageProps> = ({pokemon}) => {
     )
 }
 
-
-// You should use getStaticPaths if you’re statically pre-rendering pages that use dynamic routes
-
 export const getStaticPaths: GetStaticPaths = async (ctx) => {
 
     const { data } = await pokeApi.get<PokemonsListResponse>(`/pokemon?limit=151`);
     const Names: string[] = data.results.map( pokemon => pokemon.name );
-
 
     return {
         paths: Names.map( name => ({ params: { name } }) ),

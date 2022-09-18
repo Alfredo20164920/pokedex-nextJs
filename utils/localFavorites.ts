@@ -23,8 +23,6 @@ const getFavorites = (): number[] => {
     return JSON.parse(localStorage.getItem('favorites') || '[]');
 }
 
-
-
 const favoritesPokemons = {
     toggleFavorite,
     existInFavorites,
